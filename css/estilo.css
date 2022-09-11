@@ -20,8 +20,8 @@
 .header {
     grid-area: header;
     width: 100vw;
-    height: 50vh;
-    background-color: #5D82A6;
+    height: 40vh;
+    background-color: #695da6;
 }
 .container {
     display: flex;
@@ -49,6 +49,8 @@
 }
 /* inicio main uno */
 .main-uno {
+    width: 100vw;
+    height: 100vh;
     grid-area: main;
 }
 .fondo-main-uno {
@@ -56,14 +58,14 @@
 }
 h1 {
     color: rgb(255, 254, 254);
-    margin-top: 30px;
+    margin-top:15px;
     text-align: center;
 }
 .buscar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 15%;
+    margin-top: 20%;
 }
 .buscar-input {
     text-align: center;
@@ -80,7 +82,7 @@ h1 {
 
 .main-dos {
     width: 100vw;
-    height: 200vh;
+    height: 260vh;
 }
 .contenedor-dos {
     display: flex;
@@ -88,10 +90,16 @@ h1 {
     justify-content: center;
     justify-content: space-around;
 }
-img {
+img{
     height: 350px;
     width: 400px;
     margin-top: 30px;
+    border-radius: 3px;
+}
+
+img:hover{
+    transform: scale(2);
+    transition: transform 15s ease-out;
 }
 .formulario {
     display: flex;
@@ -127,7 +135,7 @@ iframe {
 .footer {
     grid-area: footer;
     width: 100vw;
-    height: 15vh;
+    height: 12vh;
     background-color: #695da6;
 }
 h2 {
@@ -136,8 +144,8 @@ h2 {
     color: white;
 }
 h3 {
+    margin: 10px;
     text-align: center;
-    margin-top: 10px;
 }
 .tamano-logo {
     height: 95px;
@@ -151,13 +159,15 @@ h3 {
     margin: 5px;
     padding: 5px;
 }
+.redes-sociales:hover 
+{transform: scale(2);}
+
 .tamano-logo-referencia {
     justify-content: center;
     margin-top: 5px;
     height: 35px;
     width: 35px;
 }
-
 @media only screen and (max-width: 1200px) {}
    
 
@@ -174,13 +184,16 @@ h3 {
         font-size: 12px;
         font-weight: 100;}      
 
+        h1{
+            font-size: 20px;
+        }
         .lupa {
             position: absolute;
             margin-left: 73%;
         }
         img {
-            height: 175px;
-            width: 200px;
+            height: 220px;
+            width: 250px;
             margin-top: 30px;
         }
         iframe {
@@ -190,12 +203,23 @@ h3 {
 }
     
 @media only screen and (max-width: 480px) {
-
+    #grilla-uno {
+        width: 100vw;
+        height: 150vh;
+        display: grid;
+        grid-template-rows: 2fr 4fr 1fr;
+        grid-template-columns: 2fr 4fr 1fr;
+        grid-template-areas: "header header header"
+            "main main main"
+            "footer footer footer";
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        font-weight: 100;
+    }
     .navegation ul li {
         display: flex;
         flex-direction: column;
     }
-
     .navegation ul li a
     {
         color: white;
@@ -204,29 +228,25 @@ h3 {
         text-decoration: none;
        ;
     }
-
     h1 {
         font-size: medium;
         margin-top: 15px;
         color: rgb(255, 254, 254);
         text-align: center;
     }
-
     .buscar-input {
         text-align: center;
         width: 400px;
         height: 50px;
         border: 1px solid black;
         border-radius: 20px;
-        margin-top: 20%;
+        margin-bottom: 20%;
     }
-
     .lupa {
         position: absolute;
         margin-left: 70%;
-        margin-top: 20%;
+        margin-bottom: 20%;
     }
-
     .controles {
         width: 350px;
         height: 40px;
@@ -240,5 +260,20 @@ h3 {
         border: 1px solid;
         border-radius: 3px;
     }
+    img {
+        height: 200px;
+        width: 200px;
+        margin-top: 8px;
+    }
+
+    h1{
+        margin-top: 8px;
+        font-size: 10px;
+    }
+
+
 
 }
+
+
+
