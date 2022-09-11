@@ -3,7 +3,6 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
 #grilla-uno {
     width: 100vw;
     height: 150vh;
@@ -17,7 +16,6 @@
     font-size: 15px;
     font-weight: 100;
 }
-
 /* inicio header */
 .header {
     grid-area: header;
@@ -25,52 +23,48 @@
     height: 50vh;
     background-color: #5D82A6;
 }
-
 .container {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-
 .navegation ul {
     list-style: none;
     margin: 10px;
     margin-top: 20px;
 }
-
 .navegation ul li {
     display: inline-block;
 }
-
-.navegation ul li a {
+.navegation ul li a
+{
     color: white;
     margin: 10px;
     padding: 5px;
     text-decoration: none;
+   ;
 }
-
+.navegation ul li a:hover{ 
+    background-color: rgba(197, 57, 244, 0.523);
+}
 /* inicio main uno */
 .main-uno {
     grid-area: main;
 }
-
 .fondo-main-uno {
     background-image: linear-gradient(297deg, rgba(48, 213, 205, 1) 3%, rgba(112, 7, 153, 1) 43%, rgba(134, 53, 130, 1) 74%, rgba(48, 213, 205, 1) 92%);
 }
-
 h1 {
     color: rgb(255, 254, 254);
     margin-top: 30px;
     text-align: center;
 }
-
 .buscar {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 15%;
 }
-
 .buscar-input {
     text-align: center;
     width: 600px;
@@ -78,32 +72,27 @@ h1 {
     border: 1px solid black;
     border-radius: 20px;
 }
-
 .lupa {
     position: absolute;
     margin-left: 40%;
 }
-
 /* inicio main dos */
 
 .main-dos {
     width: 100vw;
     height: 200vh;
 }
-
 .contenedor-dos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-around;
 }
-
 img {
     height: 350px;
     width: 400px;
     margin-top: 30px;
 }
-
 .formulario {
     display: flex;
     flex-direction: column;
@@ -111,7 +100,6 @@ img {
     align-items: center;
     margin: 40px;
 }
-
 .controles {
     width: 500px;
     height: 40px;
@@ -119,51 +107,43 @@ img {
     margin-bottom: 5px;
     border-radius: 3px;
 }
-
 .cajon {
     width: 500px;
     height: 300px;
     border: 1px solid;
     border-radius: 3px;
 }
-
 .controles-dos {
     width: 50px;
     height: 30px;
     margin: 5px;
     border-radius: 1px;
 }
-
 iframe {
     height: 350px;
     width: 400px;
 }
-
 /* inicio footer */
-
 .footer {
     grid-area: footer;
     width: 100vw;
     height: 15vh;
     background-color: #695da6;
 }
-
 h2 {
     font-size: 15px;
     text-align: center;
     color: white;
 }
-
 h3 {
     text-align: center;
+    margin-top: 10px;
 }
-
 .tamano-logo {
     height: 95px;
     width: 95px;
     margin: 20px;
 }
-
 .redes-sociales {
     width: 35px;
     height: 35px;
@@ -178,18 +158,87 @@ h3 {
     width: 35px;
 }
 
-@media only screen and(max-width: 1200px) {
-
-
-    .header{
-        background-color: blue;
-    }
-}
-
-
-
-@media only screen and(max-width: 768px) {
+@media only screen and (max-width: 1200px) {}
    
-}
 
-@media only screen and(max-width: 480px) {}
+@media only screen and (max-width: 768px) {
+    #grilla-uno {width: 100vw;
+        height: 150vh;
+        display: grid;
+        grid-template-rows: 2fr 4fr 1fr;
+        grid-template-columns: 2fr 4fr 1fr;
+        grid-template-areas: "header header header"
+            "main main main"
+            "footer footer footer";
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 100;}      
+
+        .lupa {
+            position: absolute;
+            margin-left: 73%;
+        }
+        img {
+            height: 175px;
+            width: 200px;
+            margin-top: 30px;
+        }
+        iframe {
+            height: 200px;
+            width: 250px;
+        }
+}
+    
+@media only screen and (max-width: 480px) {
+
+    .navegation ul li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navegation ul li a
+    {
+        color: white;
+        margin: 3px;
+        padding: 5px;
+        text-decoration: none;
+       ;
+    }
+
+    h1 {
+        font-size: medium;
+        margin-top: 15px;
+        color: rgb(255, 254, 254);
+        text-align: center;
+    }
+
+    .buscar-input {
+        text-align: center;
+        width: 400px;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin-top: 20%;
+    }
+
+    .lupa {
+        position: absolute;
+        margin-left: 70%;
+        margin-top: 20%;
+    }
+
+    .controles {
+        width: 350px;
+        height: 40px;
+        border: 1px solid;
+        margin-bottom: 5px;
+        border-radius: 3px;
+    }
+    .cajon {
+        width: 350px;
+        height: 200px;
+        border: 1px solid;
+        border-radius: 3px;
+    }
+
+}
